@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>0G Gas Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .gas-price {
+            font-size: 2em;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>0G Newton Testnet Gas Price</h1>
+    {% if gas_price %}
+        <div class="gas-price">
+            ⛽️ Current Gas Price: {{ gas_price }} Gwei
+        </div>
+    {% endif %}
+    {% if error %}
+        <div class="error">
+            Error: {{ error }}
+        </div>
+    {% endif %}
+</body>
+</html>
